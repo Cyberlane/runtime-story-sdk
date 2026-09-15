@@ -4,7 +4,7 @@ Turn a player's intention into a plan built from mechanics your game already own
 
 **Version 0.2.0 · Node.js 22+ · MIT**
 
-Built for the **OpenAI Game Builder Challenge, Track 2: Game Production Tools**. [Watch the one-minute developer demo](https://youtu.be/iSmP1_tJRds).
+Built for the **OpenAI Game Builder Challenge, Track 2: Game Production Tools**. [Watch the one-minute developer demo](https://youtu.be/0kfqFjjUfLY).
 
 ## Start here
 

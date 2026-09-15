@@ -10,6 +10,6 @@ Original demo and site artwork was generated with OpenAI image generation, then 
 - [Emberwake art direction and provenance](../examples/emberwake/art-direction/): selected fantasy art, animation parts and generation records.
 - [Site asset provenance](../site/README.md): original showcase art and optimized derivatives.
 
-The Off Script browser soundtrack and sound effects use procedural Web Audio synthesis. No soundfont or sampled instrument bank is bundled with the demos or SDK. The YouTube competition video is a separate audiovisual work; its soundtrack licensing is tracked separately and is not granted by this repository's MIT license.
+The Off Script browser soundtrack and sound effects use procedural Web Audio synthesis. No soundfont or sampled instrument bank is bundled with the demos or SDK. The selected YouTube competition video uses an original composition and effects rendered through mathematical synthesis without recorded samples or instrument banks. It is a separate audiovisual work and is not granted by this repository's MIT license. [Video verification and audio provenance](review/VIDEO.md).
 
 The project license applies to code, documentation and original art to the extent the contributor holds applicable rights. AI output may not attract copyright in every jurisdiction. Third-party packages and tools keep their own licenses; see [notices](../THIRD_PARTY_NOTICES.md).

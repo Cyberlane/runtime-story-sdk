@@ -130,7 +130,7 @@ document.querySelector("#load-video").addEventListener("click", (event) => {
   event.preventDefault();
   const frame = document.createElement("iframe");
   frame.src =
-    "https://www.youtube-nocookie.com/embed/iSmP1_tJRds?autoplay=1&rel=0";
+    "https://www.youtube-nocookie.com/embed/0kfqFjjUfLY?autoplay=1&rel=0";
   frame.title = "Runtime Story SDK developer demo on YouTube";
   frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
   frame.referrerPolicy = "strict-origin-when-cross-origin";

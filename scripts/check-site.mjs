@@ -23,7 +23,7 @@ const files = await walk(root);
 const html = await readFile(resolve(root, "index.html"), "utf8");
 assert.match(
   html,
-  /https:\/\/youtu\.be\/iSmP1_tJRds|youtube(?:-nocookie)?\.com\/embed\/iSmP1_tJRds/,
+  /https:\/\/youtu\.be\/0kfqFjjUfLY|youtube(?:-nocookie)?\.com\/embed\/0kfqFjjUfLY/,
   "The developer video must be linked.",
 );
 assert.match(html, /OpenAI/, "The event attribution must be present.");

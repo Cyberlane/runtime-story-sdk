@@ -4,7 +4,7 @@
 
 **Game-owned mechanics. Player-driven plans. Consequences that stay.**
 
-[Explore the visual showcase](https://cyberlane.github.io/runtime-story-sdk/) · [Watch the developer demo](https://youtu.be/iSmP1_tJRds) · [Start building](docs/QUICKSTART.md)
+[Explore the visual showcase](https://cyberlane.github.io/runtime-story-sdk/) · [Watch the developer demo](https://youtu.be/0kfqFjjUfLY) · [Start building](docs/QUICKSTART.md)
 
 Built for the **OpenAI × Tokyo AI Game Builder Challenge, Track 2: game-production tools**. Runtime Story turns a player's free-form intention into a proposed sequence of mechanics your game already supports. Your rules validate the plan. The player accepts its terms. Your host commits each action, with a receipt that makes exact retries safe.
 
@@ -108,6 +108,6 @@ The original comparison had three cases. The SDK, a competent deterministic plan
 
 ## Event, credits and license
 
-Created by **Justin Nel / Cyberlane** for the [OpenAI × Tokyo AI event](https://luma.com/3kj24doy). This is an independent competition entry. [Project description and reuse disclosure](docs/COMPETITION.md) · [Video](https://youtu.be/iSmP1_tJRds).
+Created by **Justin Nel / Cyberlane** for the [OpenAI × Tokyo AI event](https://luma.com/3kj24doy). This is an independent competition entry. [Project description and reuse disclosure](docs/COMPETITION.md) · [Video](https://youtu.be/0kfqFjjUfLY).
 
 Project code, documentation and original artwork are provided under the [MIT License](LICENSE), to the extent the contributor holds the applicable rights. AI-assisted code and generated artwork are disclosed in [credits](docs/CREDITS.md). Dependencies retain their own licenses in [third-party notices](THIRD_PARTY_NOTICES.md). The externally hosted video is not included in this repository's license grant.

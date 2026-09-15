@@ -1,6 +1,6 @@
 # Your first working plan
 
-Start with the offline example to see exactly what the runtime guarantees. Then connect a live provider and a game engine. This repository was built for the **OpenAI Game Builder Challenge, Track 2: Game Production Tools**. [Watch the one-minute developer demo](https://youtu.be/iSmP1_tJRds).
+Start with the offline example to see exactly what the runtime guarantees. Then connect a live provider and a game engine. This repository was built for the **OpenAI Game Builder Challenge, Track 2: Game Production Tools**. [Watch the one-minute developer demo](https://youtu.be/0kfqFjjUfLY).
 
 ## 1. Install the repository
 

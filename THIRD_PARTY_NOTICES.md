@@ -13,7 +13,7 @@ The project's MIT license does not replace the licenses of dependencies or devel
 
 Node.js, npm, browsers and the optional Codex CLI are installed separately. Godot, Unity and Unreal are optional integration targets; this repository contains our example client source, not those engines. Their own distribution and service terms apply. OpenAI services require your own account and applicable service agreement; no API credentials or model weights are distributed.
 
-Generated original assets and AI-assisted development are disclosed in [credits](docs/CREDITS.md). The repository does not bundle the externally hosted submission video's audio or Apple General MIDI bank. Historical private prototype dependencies and discarded 3D studies are not part of this distribution.
+Generated original assets and AI-assisted development are disclosed in [credits](docs/CREDITS.md). The repository does not bundle the externally hosted submission video's audio. Its selected score and effects use original mathematical synthesis without recorded samples or instrument banks. Historical private prototype dependencies and discarded 3D studies are not part of this distribution.
 
 ## Website fonts
 

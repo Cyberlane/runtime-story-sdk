@@ -27,4 +27,4 @@ The SDK validates candidate routes against `game.mjs`. It owns proposal, accepta
 
 All mutations require JSON. Reuse the exact command when retrying. Planned-step receipts survive checkpointing; the manual-command cache retains the last 200 commands only in memory. The journal stores explicit checkpoints in browser local storage. There is no automatic durable server persistence.
 
-[Art direction and provenance](art-direction/BRIEF.md) · [Deployment boundaries](../../docs/KNOWN-LIMITATIONS.md) · [Developer video](https://youtu.be/iSmP1_tJRds).
+[Art direction and provenance](art-direction/BRIEF.md) · [Deployment boundaries](../../docs/KNOWN-LIMITATIONS.md) · [Developer video](https://youtu.be/0kfqFjjUfLY).
