@@ -33,43 +33,41 @@ Copy each response into its corresponding form field. Each is below 200 words.
 
 ### Meaningful OpenAI use · 30%
 
-OpenAI interprets a player's free-form intention and composes a plan from mechanics registered by the developer. The model receives relevant game state, supported actions, prior commitments and constraints. It proposes explicit terms and steps that the host validates before the player can accept them.
+OpenAI turns a player's priorities into choices the game can carry out. In Emberwake, a player can ask to rescue a friend, spare the wolf and keep their potions. The model receives the current world state and the developer's available actions, then proposes a compatible sequence. This lets players express an approach in their own words, including combinations that were not written as individual quest branches.
 
-In Emberwake, a player can ask to rescue a friend while sparing the creature blocking the route. When a crossing collapses, OpenAI proposes a revised journey that works with completed actions and the remaining resources. The player still performs each accepted action.
+Live planning runs through Codex CLI. The SDK checks the proposal against game rules before presenting it for acceptance, and only the game's action handlers can change the world. OpenAI supplies interpretation and planning while the developer retains control over what is possible.
 
-The same planning interface supports information disclosure in Off Script and resource management in Relay Station. Each game supplies its own adapter and rules. Removing OpenAI leaves deterministic validation and execution, but removes this build's free-form interpretation and plan synthesis.
-
-Live OpenAI planning is verified through Codex CLI, including two fresh plans in the public release review. The Responses API adapter has mocked transport tests. The submitted video is an edited replay of retained live plans and their executed outcomes.
+I also used Codex to help implement and review the project, and OpenAI image generation for selected artwork. The video replays plans retained from live OpenAI runs.
 
 ### Originality · 25%
 
-Runtime Story SDK combines free-form player intentions with explicit outcomes, player acceptance and a record of completed actions. Its focus is the boundary between an unexpected request and a sequence the game's existing mechanics can actually perform.
+Runtime Story SDK treats a quest as an agreement the player can help shape and renegotiate. Its distinctive focus is what happens after that agreement has already changed the world.
 
-The reusable workflow continues after acceptance. An interrupted plan can be revised while completed effects remain recorded and game rules enforce continuing promises. Exact action identities and receipts let the host distinguish a repeated command from a new action.
+A revised plan must account for completed actions and the restrictions the game continues to enforce. A delivered item stays delivered, spent supplies stay spent, and unfinished steps can change through a newly accepted proposal. That history also survives saving and restoring the game.
 
-Three contrasting games make that design concrete: Emberwake handles an expedition and resource promises, Off Script handles selective disclosure and consent, and Relay Station handles repairs, surveys and transmission choices. Their domain rules live in separate adapters while the shared package owns validation, acceptance, revisions and checkpoints.
+This creates a different authoring model from writing every quest route as a fixed branch: developers define the available mechanics and their boundaries, while players can propose combinations at runtime. The reusable package carries the agreement through acceptance, interruption and revision across different scenarios.
 
-This project offers developers a coherent integration pattern for player-driven plans across different game systems, with the ownership boundaries visible in code and in the player experience.
+The contribution is the complete, inspectable workflow for both player and developer. It builds on established planning and validation techniques.
 
 ### Playability / utility · 25%
 
-Developers can try the SDK without an account: the offline tutorial registers two generator mechanics, validates a plan, accepts it, executes both actions and verifies exact retries and checkpoint resume. They can then connect a live provider and adapt one of three included games.
+A developer can start with a complete offline exercise before connecting a model. The tutorial shows how to register actions to repair and power a generator, run a plan, resume a saved session and safely retry a command. It works without an API key.
 
-Emberwake provides a playable RPG with ordinary controls alongside intention-based planning. Off Script demonstrates negotiation and persistent information disclosure. Relay Station is a compact resource-management example designed to make the adapter and HTTP protocol easy to inspect.
+From there, Relay Station provides a small resource-management game and HTTP host to adapt to another project. The integration work is explicit: describe the relevant game state, expose permitted actions and connect their outcomes to the game's existing systems. The SDK supplies the shared planning lifecycle.
 
-Each game supplies explicit state, action schemas, reducers and constraints. Developers reuse the package's proposal validation, acceptance, revision guards, receipts and checkpoint checks while keeping control of their mechanics and presentation.
+The repository includes JavaScript, Godot, Unity and Unreal guides. A native Godot client has been run end to end. Unity and Unreal currently provide source examples awaiting native validation.
 
-Detailed tutorials cover JavaScript, Godot, Unity and Unreal. Godot has a working native client. Unity and Unreal are documented source integrations awaiting native validation. The included hosts support local experimentation. A deployed game supplies its own authentication, player sessions and durable storage.
+For players, Emberwake demonstrates the result in a playable RPG with ordinary movement and actions alongside intention-based planning. The current package supports local prototyping. Online releases still require game-specific authentication, sessions and durable storage.
 
 ### Execution / craft · 20%
 
-The public release separates the SDK, three demos, engine examples, tutorials and visual showcase. The README links directly to the developer video and a complete offline first-plan tutorial. The GitHub Pages presentation uses original artwork, responsive layouts, accessible controls and a playable video embed.
+I treated the release as something another developer should be able to inspect, install and understand. The SDK, game demos and engine examples live in clearly separated folders, with an MIT license and dependency notices. The public presentation adds original artwork, responsive layouts, keyboard-accessible controls and a one-minute developer video.
 
-The release review passed 106 tests, selected asset checks and site-reference checks under the minimum supported Node version. CI runs the automated checks on Node 22 and 24. The packed SDK was installed into a fresh external consumer and completed the tutorial successfully.
+The release passed 106 automated tests, and GitHub CI checks Node 22 and 24. The packaged SDK was also tested in a separate project, verifying installation outside the development workspace.
 
-Native Godot verification executed 11 actions and checked acceptance without effects, exact retries, checkpoint restoration and rejection of abandoned-branch commands. A fresh Emberwake live run completed two OpenAI plans, revised an interrupted journey and retained 12 unique execution receipts.
+The most important checks covered mistakes that could break a player's save: duplicate actions, interrupted plans, stale responses and checkpoint restoration. A fresh live OpenAI run produced two plans and executed 12 actions, including a revised route after a crossing collapsed.
 
-Independent code reviews addressed provider limits, checkpoint consistency, cancellation, browser recovery and rendering lifecycle. Review records identify remaining limits, including uncompiled Unity/Unreal samples and production hosting responsibilities.
+Source reviews led to fixes in cancellation, provider limits, save consistency and browser recovery. The repository includes these review records so developers can inspect the evidence alongside the code.
 
 ## What the evidence establishes
 
