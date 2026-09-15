@@ -1,0 +1,38 @@
+[
+  {
+    "id": "selective-three-sector",
+    "intent": "Survey north, east and west. Transmit only west and keep north and east local. Finish with at least 4 battery and 2 metal, and at most 2 heat. Repair whatever is necessary.",
+    "terms": {
+      "surveySectors": ["north", "east", "west"],
+      "transmitSectors": ["west"],
+      "minBattery": 4,
+      "maxHeat": 2,
+      "minMetal": 2
+    },
+    "possible": true
+  },
+  {
+    "id": "local-scanner-only",
+    "intent": "Survey north and east only. Keep both findings local and send no transmissions. Preserve at least 4 metal and finish with at least 5 battery and at most 1 heat. Repair only what this needs.",
+    "terms": {
+      "surveySectors": ["north", "east"],
+      "transmitSectors": [],
+      "minBattery": 5,
+      "maxHeat": 1,
+      "minMetal": 4
+    },
+    "possible": true
+  },
+  {
+    "id": "impossible-metal-reserve",
+    "intent": "Survey west and transmit its findings, but leave at least 4 of the station's 6 metal unused. This metal reserve is mandatory. Do not relax it or invent extra equipment or materials. Finish with at least 1 battery and at most 4 heat.",
+    "terms": {
+      "surveySectors": ["west"],
+      "transmitSectors": ["west"],
+      "minBattery": 1,
+      "maxHeat": 4,
+      "minMetal": 4
+    },
+    "possible": false
+  }
+]

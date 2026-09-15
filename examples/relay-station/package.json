@@ -1,0 +1,17 @@
+{
+  "name": "@runtime-story/relay-station",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "start": "node --env-file-if-exists=../../.env server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@off-script/runtime-story": "0.2.0"
+  },
+  "license": "MIT"
+}

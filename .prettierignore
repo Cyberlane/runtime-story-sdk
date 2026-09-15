@@ -1,0 +1,7 @@
+package-lock.json
+site/assets/
+site/generated-originals/
+docs/licenses/
+**/public/art/
+**/public/demo/assets/
+**/art-direction/

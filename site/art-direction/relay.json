@@ -1,0 +1,11 @@
+{
+  "asset": "relay",
+  "created": "2026-09-15",
+  "generator": "OpenAI built-in image generation",
+  "purpose": "Original promotional concept art, not implemented gameplay",
+  "prompt": "Use case: stylized-concept\nAsset type: wide 16:9 promotional key art for Relay Station, a small sci-fi resource management demo, no text.\nPrimary request: A magnificent cinematic original painting of a remote communications relay station on a cold desolate moon. Brutalist cylindrical habitat with huge parabolic dish antenna, orange maintenance lights, heavy insulated cables, a single helmeted engineer walking between the airlock and a damaged generator with a toolkit. Dusty dark moon foreground. Enormous pale ringed planet in deep navy sky, cyan aurora or magnetic arc behind the dish. No battle, no weapons.\nStyle: sophisticated hand-painted retro science fiction game concept art, tactile 1990s physical miniature realism mixed with oil painted environment. Strong silhouettes, purposeful industrial design, deep atmosphere, premium cover-art finish. Deep ink navy, oxidized steel, icy cyan, selective amber warning lights. Not an existing franchise.\nComposition: structure dominates center, main satellite dish in upper middle, foreground engineer small for scale and to imply human decisions within a system. Works in a landscape and central portrait crop. Keep bottom fifth dark and relatively calm for HTML typography added later.\nConstraints: no lettering, no logos, no watermark, no HUD, no UI, no frames. Do not draw a screenshot or pretend to depict implemented game graphics.",
+  "original": "relay.png",
+  "originalRetained": "site/generated-originals (excluded from Git and deployment)",
+  "defaultOutputBasename": "exec-fa7b789a-cbd6-4a0b-bd06-be777a704999.png",
+  "webAsset": "site/assets/relay.webp"
+}

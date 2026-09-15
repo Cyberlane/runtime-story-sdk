@@ -1,0 +1,117 @@
+[
+  {
+    "key": "emberwake_portrait_generation",
+    "prompt": "Create a production RPG character portrait sheet for Emberwake matching these two supplied character atlases exactly. Two equal square portrait panels side by side, wide 2:1 image. LEFT: Rowan, the young adult brown-haired ranger from first reference, mustard-gold travel cloak over dark teal tunic, leather collar, calm determined face, three-quarter view looking slightly right. RIGHT: Lark, the scout from second reference, preserve their face, hair and blue-gray travel clothing, alert thoughtful expression looking slightly left. Each panel is a tight head-and-shoulders painted portrait with face prominently filling the central area, highly readable at 48 pixels. Rich hand-painted premium fantasy game illustration, anatomically natural faces, restrained dramatic warm rim lighting, fine fabric and hair details, muted dark jade textured backgrounds. Match the existing character identities and mature woodland fantasy art direction, no anime, no photographic skin, no text, no frames, no symbols, no UI. Each square panel completely filled, no gutters or dividing line.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "party-portraits-v1.png",
+    "status": "selected",
+    "originalSha256": "c2ef94ed5da3e33436d19d797e9ff0cb6cf4a72af3a8922ae7979cd5014f8bff"
+  },
+  {
+    "key": "emberwake_wolf_generation",
+    "prompt": "Production animation atlas for the ASH WOLF enemy in Emberwake, a premium painterly woodland fantasy RPG. One image, exactly 6 columns by 4 rows, 24 full-body wolf sprites, 1536x1024. Pure flat chroma-key magenta #FF00FF background, no gradients, no cast shadows, no labels or grid lines. A believable powerful ash-gray wolf with thick charcoal and silver fur, moss-brown paws, pale amber eyes, distinctive ragged left ear. Rich hand-painted texture and dimensional fantasy-game shading, crisp readable silhouette, not a cartoon puppy, not pixel art, not photorealistic. Viewed three-quarter side facing LEFT toward the player's party. Each wolf fully fits its own 256px square cell with 24px padding, same scale, feet at y220, body centered x128, tail contained. Row1: six subtly distinct idle breathing frames, ears alert and tail shifting, wary but grounded. Row2: six sequential ATTACK frames, crouch anticipation, coil back, spring forward, biting lunge, paws land, recover. Keep the full leaping body within its cell and consistent scale. Row3: six sequential HIT and DEFEAT frames: flinch, recoil, stagger, legs buckle, sink onto side, lie still after defeat. No blood, no gore. Row4: six sequential PEACEFUL TAMING frames: suspicious head tilt, sniff an unseen offered herb, ears relax, head lowers, sit gently, curl into a calm resting pose. Every sequence must preserve the same individual wolf and material style. Clear separations, complete paws and tails, no inter-cell overlap, no extra accessories or scenery. This is a real frame-by-frame game asset, not a concept-art collage.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": null,
+    "status": "rejected-opaque-background",
+    "originalSha256": "ec623f4216a52d8afc9a19c3b43a3a39dac1392c0c714f702df7424c51878f17"
+  },
+  {
+    "key": "emberwake_wolf_keyed_generation",
+    "prompt": "Correct this sprite atlas only: replace the entire gray-brown background with perfectly SOLID FLAT #FF00FF chroma-key magenta, with no gradient or texture whatsoever. Keep all 24 wolves, their layout, poses, size and fur detail unchanged. Remove the pink/purple tinge from fur highlights: fur should be neutral charcoal, silver and warm gray. No cast shadows or ground. Ensure magenta fills every background gap between legs and tails. Do not add any objects, labels, borders, or rearrange frames. This needs to composite as separate animation frames in a real game.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "wolf-atlas-v1.png",
+    "status": "selected",
+    "originalSha256": "0f893570be044cf2e7b69224fda22e03426e2cb555ec832338daa0fbb4254b55"
+  },
+  {
+    "key": "emberwake_sentinel_generation",
+    "prompt": "Production game animation atlas for a STONE SENTINEL in Emberwake, a premium painterly woodland fantasy RPG. EXACTLY SIX columns and FOUR rows, 24 full-body frames, 1536x1024. Background MUST be perfectly flat uniform #FF00FF chroma-key magenta, like a sprite extraction sheet. No gradient, vignette, cast shadow, ground or scenery. Ancient squat humanoid guardian assembled from weathered gray-green stone, moss in cracks, bronze rune bands, cyan light in eye slits and a small central chest rune, broad heavy forearms, solid rocky legs. Elegant sculpted forest-ruin design, detailed painted materials, dimensional and readable, not robotic sci-fi, not a cartoon, not pixel art. Three-quarter view facing LEFT. All figures same size, about 195px high inside each 256x256 cell, feet at y230, full arms contained with 20px margins. Row1 six subtle idle frames: breathing-like stone settling, head turns slightly, ready fists. Row2 six attack cycle frames: brace, pull massive fist back, raise fist overhead, downward slam, follow-through, recover. Keep body anchored and entire fist within each cell. Row3 six hit/defeat frames: flinch, stagger, crack through torso, knees buckle, blocks separate downward, inert pile of rubble with cyan light extinguished. No explosion debris crossing cells. Row4 six awakening frames: dormant hunched stone statue, eyes first light, head lifts, torso rises, arms unfold, fully ready guardian. Consistent armor shapes and rune placement through animation. No text, no labels, no borders, no inter-cell overlap. Crisp high-quality hand-painted fantasy-game art.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "sentinel-atlas-v1.png",
+    "status": "selected",
+    "originalSha256": "fd1a3412f7df0bca256c74ddc4bd8c03a18c6ba5b80805bafe018d135ac11de5"
+  },
+  {
+    "key": "emberwake_forest_arena_generation",
+    "prompt": "Production battle-scene BACKGROUND for Emberwake, a premium hand-painted woodland fantasy RPG. One beautiful full-bleed 3:2 landscape image, 1536x1024. Low three-quarter side-view camera looking across an intimate ancient forest clearing, eye level about waist height of a human standing in the scene. Rich painterly realism, exquisite bark and moss texture, deep jade shadows, dappled amber late-afternoon sunbeams, drifting pollen. Giant tree roots and mossy boulders form a natural wolf den at the BACK RIGHT. Detailed evergreen forest recedes behind, soft atmospheric depth. Important game composition: lower HALF is a relatively flat open earth-and-moss arena with subtle grass and small stones, broadly unobstructed and evenly lit enough for clear sprite silhouettes. Place empty standing areas for player at (27%,76%) and wolf at (72%,72%), companion at (16%,70%). No large foreground tree trunks or plants over these areas. Dense rich foliage frames far left and right edges without blocking actors. No people, no animals, no weapons, no UI, no labels or text. Finished polished game-environment art, not a sketch, no flat geometric shapes, no hyperreal photo. Inviting but tense, coherent natural lighting, no excessive bloom or blur. This will be used behind real animated sprites, so keep the fight area clear.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "wolf-hollow-arena-v1.png",
+    "status": "selected",
+    "originalSha256": "e01954ddb50da365a6fb87ad9a49a2a6c307c4e1665e8459e2278291e5b548f8"
+  },
+  {
+    "key": "emberwake_shrine_arena_generation",
+    "prompt": "Production battle-scene background for Emberwake, a premium painterly woodland fantasy RPG. New image with NO characters or UI. Full-bleed 3:2 landscape 1536x1024, low three-quarter side-view camera looking across the Dawnseed shrine arena. Ancient elegant gray-green stone ring set in dense evergreen forest, intricate weathered bronze inlays, worn carved concentric flagstones, tiny cyan runes glowing softly in cracks, moss, ferns and delicate pale flowers at the margins. Tall broken carved monoliths and a small EMPTY ceremonial pedestal at the BACK RIGHT around (80%,35%), strong atmospheric forest depth behind, amber shafts of late afternoon sunlight from upper left catching floating dust. The lower HALF of the frame must be an unobstructed, nearly level fight area of textured flagstones where player sprites stand at (27%,76%), companion (16%,70%) and stone guardian (72%,72%). Nothing tall in these standing zones. Foreground moss and fallen leaves only at extreme edges. Rich hand-painted game art, sophisticated material detail, grounded natural perspective, not photorealistic, not a schematic, not a low-poly render. Calm ancient beauty with subtle magical tension, muted jade/teal shadows and warm brass light. No people, no creatures, no weapons, no relic on pedestal, no labels, no text, no border.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "shrine-arena-v1.png",
+    "status": "selected",
+    "originalSha256": "77b68a40394a28bd2ba6724f962882c8d79a3bc01c1fdbc44fdecbb685cb8c19"
+  },
+  {
+    "key": "emberwake_environment_generation",
+    "prompt": "Production game environment asset for EMBERWAKE, a premium painterly woodland fantasy RPG. Generate ONE full-bleed landscape illustration, landscape 3:2 aspect ratio, high resolution. This is a playable exploration map viewed from a high three-quarter overhead camera, not a parchment map, not a diagram and NOT a mockup with UI. Rich hand-painted indie RPG art with exquisite natural texture, volumetric late-afternoon amber shafts through tall evergreen trees, deep jade and desaturated blue shadow, lush ferns, mossy stone, flowing turquoise river, tiny amber lanterns. Cohesive elegant believable world, meticulous environmental storytelling, strong readable clearings and grounded perspective. Entire valley fills frame with no horizon or sky, no outer border, no typography, no letters, no icons, no characters or creatures. Exact landmark layout expressed as percentages of frame, important for matching game coordinates: warm canvas-tent camp with small fire and supplies centered at (12.5%,73%); moonleaf spring and blue-white flowers at (25%,45%); old mossy stone crossing at (50%,64%); wolf clearing beneath roots and boulders at (31%,18%); ancient broken watchtower ruins at (62.5%,18%); ornate circular Dawnseed shrine pedestal with empty top at (75%,45%); small weathered wooden ferry dock and moored boat at (69%,82%). Keep center of each clearing open for an animated character. River runs from x45% at top gently down to x65% at bottom, dividing the valley. Narrow realistic earth/stone trails connect camp-spring, camp-crossing, spring-crossing, spring-wolf clearing, wolf clearing-watchtower, watchtower-shrine, crossing-shrine, shrine-ferry. Northern wolf-watchtower trail crosses river on a SECOND raised fallen-log footbridge that is clearly different from the old southern crossing. The southern crossing is the fragile stone crossing that will collapse later. Preserve these two distinct crossings. Paths subtly embedded in terrain, not thick straight bright lines. Painted illustration should feel like an expensive finished game environment, richly detailed but clean and legible at 1200px wide, understated magical mood. No cartoon triangles, no low-poly look, no flat vector symbols, no giant foreground objects obscuring paths.",
+    "references": [],
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "provenance": "Exact original tool input retained from this task session.",
+    "selectedFile": "lantern-reach-v1.png",
+    "status": "selected",
+    "originalSha256": "67e4e6fac505733ce3a2df41b8648220f7afcc648506312c715719b29769b197"
+  },
+  {
+    "key": "emberwake_storm_generation",
+    "prompt": "Edit this exact production RPG environment into its AFTER-STORM state. Preserve image dimensions, every landmark's exact position and scale, the camera, all trees, trails, camp, spring, watchtower and shrine architecture. The broad southern STONE bridge across the river at about x48%, y54% must now have a clearly missing CENTRAL SPAN, broken jagged stone abutments and a few rubble stones falling into swollen whitewater. This southern river crossing is now physically impassable. The northern LOG bridge near y16% must remain intact and walkable, unchanged. Change lighting to moody cool teal overcast dusk after heavy rain, wet reflective stone, slightly misty forest and stronger flowing river. Camp lanterns and fire stay warm and welcoming. The dock and boat at lower right remain safe and usable. The shrine pedestal must remain empty. No people, no creatures, no relic, no UI, no labels. Maintain the beautiful polished painterly game-art finish and coherent forest, rich material detail. Do not create new routes or move any landmark. Keep the whole illustration crisp and usable as the same map's state variant, not a different composition.",
+    "references": [
+      "lantern-reach-v1.png"
+    ],
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "provenance": "Exact original tool input retained from this task session.",
+    "selectedFile": "lantern-reach-storm-v1.png",
+    "status": "selected",
+    "originalSha256": "c3fc770810d69399b77a4e781945f272fe5de7d7e014f47164072301ddc63859"
+  },
+  {
+    "key": "emberwake_rowan_generation",
+    "prompt": "Create a production-ready 2D CHARACTER ANIMATION SPRITE ATLAS for a polished painterly woodland fantasy RPG. ONE image with a genuinely TRANSPARENT alpha background, no checkerboard pattern, no ground plane, no labels, no borders. Exact layout: SIX equal columns and FOUR equal rows, 24 frames total, 3:2 overall aspect ratio (1536x1024 preferred), each cell 256x256. Every full-body figure contained in its cell with generous padding. Identical camera and proportions, baseline feet at y=224 within every cell, character body about 185px tall, centered x128. Character Rowan: young adult ranger, medium brown hair tied back, weathered mustard-gold hooded cloak with hood down, fitted dark teal leather tunic, brown boots and belts, small satchel, short silver sword held in right hand. Attractive premium hand-painted fantasy game sprite with crisp silhouette, dimensional material shading, detailed cloth folds and clear face. Consistent three-quarter view facing RIGHT, head toward upper right, feet visible. Not chibi, not pixel art, not a realistic photograph, not low-poly. ROW 1: SIX distinct frames of a subtle idle breathing cycle, cloak and sword hand gently shift, feet planted. ROW 2: SIX distinct sequential frames of a full WALK cycle to the right, alternating planted and lifted feet, natural stride and cloak follow-through, in-place animation with consistent root. ROW 3: SIX distinct sequential sword attack frames: ready, wind-up, high anticipation, decisive sweeping strike, low follow-through, recovery. Keep full weapon inside each cell, do not paint trails across cells. ROW 4: SIX distinct guard/hit reaction frames: raise sword defensively, brace, block contact, recoil, regain balance, return to ready. This atlas will be sliced and animated by real game code. Precision grid, consistent character identity and frame-to-frame stance are essential. Avoid duplicate frames, extra characters or objects, framing drift, cropping, text, shadows extending beyond cells, and opaque backgrounds.",
+    "references": [],
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "provenance": "Exact original tool input retained from this task session.",
+    "selectedFile": null,
+    "status": "rejected-opaque-background",
+    "originalSha256": "061972dc0eab7ddd75b1fcbbbacb627c9dd5fbcc211d3d08fc62b2022700ebdc"
+  },
+  {
+    "key": "emberwake_rowan_keyed_generation",
+    "prompt": "Correct this RPG animation atlas for actual game compositing. Preserve the SAME Rowan character, outfit, face, art style and all 24 sequential poses arranged SIX columns by FOUR rows. Replace EVERY brown background pixel with perfectly uniform bright chroma-key magenta #FF00FF. Absolutely flat exact magenta everywhere outside figures, including between limbs and sword and body. No gradients, glows, shadows, texture or painted ground. Do not put magenta into the figure itself. IMPORTANT: shrink each full figure INCLUDING its entire sword and cloak to fit comfortably inside its own 256x256 cell, with at least 16 pixels of clear magenta padding at left/right/top and feet aligned at y224 inside its cell. No sword may cross a cell boundary. Keep root centered at x128 for each frame. Make all 24 frames visually separate with this margin. Fix the extended stabbing sword in row3 so it remains within that frame rather than intruding into the neighbor. Full sheet 1536x1024, no labels or grid lines. Preserve the crisp painterly fantasy rendering, identical scale and consistent anatomy across frames. This is a production animation atlas, not a character presentation poster.",
+    "references": [
+      "exec-ec35d6a5-54a7-411a-aaa0-ee147c96d29d.png"
+    ],
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "provenance": "Exact original tool input retained from this task session.",
+    "selectedFile": "rowan-atlas-v1.png",
+    "status": "selected",
+    "originalSha256": "1d5389ee8e7ad0cbfcd0b2a24910bdcf18342ff65f485dc987888307238b9036"
+  },
+  {
+    "key": "emberwake_lark_generation",
+    "prompt": "Use the supplied atlas ONLY as a style and rendering reference. Create a NEW production animation atlas for LARK, Rowan's scout companion, in exactly the same premium hand-painted woodland RPG style. Lark is a young adult woman with warm dark-brown skin, short dark curly hair, a pale blue-gray hooded traveling mantle with hood down, fitted practical brown leather clothing, dark boots, a slim recurve bow and a small quiver. Friendly alert expression, attractive clear silhouette, full body facing RIGHT in three-quarter view, believable anatomy, not chibi. EXACT layout SIX columns by FOUR rows, 24 separate frames, 1536x1024. Perfectly uniform flat chroma-key magenta #FF00FF background with no shadows or gradients. Keep character and bow ENTIRELY INSIDE each 256x256 cell with 20px padding, feet on y230 baseline, identical scale. Row1 six sequential subtle idle breathing frames. Row2 six sequential WALK cycle frames with distinctly alternating footfalls and moving blue cloak, in place, consistent root. Row3 six sequential bow attack frames: ready, raise bow, draw string, aim, release, lower/recover. Bow and arrow remain within the cell. Row4 six sequential RESCUE frames: kneeling exhausted, look up, rise halfway, stand, lift hand gratefully, relaxed companion-ready stance. No Rowan, no other characters, no text, no grid lines, no background texture. Production atlas precision and consistent character design across every frame. Do not reproduce the reference's oversized swords or overflow into neighboring cells.",
+    "references": [
+      "exec-1770aa17-c360-4266-aba7-6a34c2187647.png"
+    ],
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "provenance": "Exact original tool input retained from this task session.",
+    "selectedFile": "lark-atlas-v1.png",
+    "status": "selected",
+    "originalSha256": "0aad5cca53c206942e9b9912ef92d0a2f4a89b25a835f04259bc7a28164327c0"
+  }
+]

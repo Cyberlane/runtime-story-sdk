@@ -1,0 +1,11 @@
+{
+  "asset": "warehouse",
+  "created": "2026-09-15",
+  "generator": "OpenAI built-in image generation",
+  "purpose": "Original promotional concept art, not implemented gameplay",
+  "prompt": "Use case: stylized-concept\nAsset type: wide 16:9 promotional key art for a narrative negotiation game demo called Off Script, no text.\nPrimary request: An extraordinary original painterly cinematic fantasy-industrial port warehouse scene at night. A lone young archivist in a dark teal long coat stands at an open antique desk with a ledger and a few paper sheets, meeting a stern dock official with a red scarf. Both are small figures within a grand moody setting. Huge wooden beams and iron industrial arches, shelves with cargo crates, rope, old brass lamps, a vast window framing the misty harbor and ships outside. A closed iron gate in the background conveys interrupted departure. Focus on the beautiful environment, not expressive faces.\nStyle: premium sophisticated hand-painted game concept art, dramatic oil/gouache matte painting, tactile wear, realistic scale, superb worldbuilding, no existing franchise elements. Warm vermilion and copper light from windows and lanterns on left, deep midnight teal shadows at right, restrained gold, rich reddish atmosphere. Composition should crop well to a vertical card from the center as well as a landscape image. Figures and document illuminated in lower middle, architecturally rich upper image. No text, no interface, no logo, no watermarks, no modern technology, no labels.",
+  "original": "warehouse.png",
+  "originalRetained": "site/generated-originals (excluded from Git and deployment)",
+  "defaultOutputBasename": "exec-aefbd74f-d308-411d-8ecb-8c1e31afff3c.png",
+  "webAsset": "site/assets/warehouse.webp"
+}

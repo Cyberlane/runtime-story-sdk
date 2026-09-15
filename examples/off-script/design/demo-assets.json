@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-13",
+  "style": "Ink and gouache, coastal warehouse, teal shadows and amber light",
+  "runtime": "Original 2D backgrounds, separate character layer, parallax, confirmed-state transitions",
+  "assets": [
+    {
+      "file": "cast-matte.png",
+      "sha256": "db605e8d30de25817b53f51b556611394f2b49bd3a72b4074d5a746de9dfed2a",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2040480,
+      "generationRecord": "castMatte",
+      "purpose": "Runtime chroma-composited character atlas"
+    },
+    {
+      "file": "office-morning.png",
+      "sha256": "56856826b23044b37226ff5541a1d9b2484c3dff7b073f690ea44b4112d9eada",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2588396,
+      "generationRecord": "officeMorning",
+      "purpose": "State-specific scene illustration"
+    },
+    {
+      "file": "office.png",
+      "sha256": "5dadbf51c840347ec772d5e2977466b1e375de967eb3f6ce84dfa7501f36d222",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2701661,
+      "generationRecord": "office",
+      "purpose": "State-specific scene illustration"
+    },
+    {
+      "file": "quay.png",
+      "sha256": "d2694ca5a151e76abef6b0b93144a3d7a60237f8456debaae9908e13173dd936",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3192017,
+      "generationRecord": "quay",
+      "purpose": "State-specific scene illustration"
+    },
+    {
+      "file": "warehouse-morning.png",
+      "sha256": "943f2951a2ff047f63ec058dfb303524ba4a1e29234b618beeea645f46b8d88d",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2705563,
+      "generationRecord": "morning",
+      "purpose": "State-specific scene illustration"
+    },
+    {
+      "file": "warehouse-open.png",
+      "sha256": "5a7f80749eb2cf2c647bc0c2f43b1c0c9e129174ce5ce14d73d86c37c748e671",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2724072,
+      "generationRecord": "open",
+      "purpose": "State-specific scene illustration"
+    },
+    {
+      "file": "warehouse.png",
+      "sha256": "e385ead5bf8181c92512d09b327b8c009342b6426379302478d8ff4a605b71f2",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2845387,
+      "generationRecord": "warehouse",
+      "purpose": "State-specific scene illustration"
+    },
+    {
+      "file": "ivo-acting-v2.png",
+      "sha256": "2a09206fc193e66a5ff2888a214339f47d12573891cddc0759cd6704c57f045f",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1726574,
+      "generationRecord": "character-acting-generation.json",
+      "purpose": "Contextual character acting atlas, runtime chroma compositing"
+    },
+    {
+      "file": "sera-acting-v1.png",
+      "sha256": "70be7161c8ba02f69b4d77de32e477cfa33b8fc7bf01fce346d5056d13b655de",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2058742,
+      "generationRecord": "supporting-acting-generation.json",
+      "purpose": "Contextual character acting atlas, runtime chroma compositing"
+    },
+    {
+      "file": "mara-acting-v1.png",
+      "sha256": "6a18b69d35874210ed425fa26c92fcb28645be75aed1c93d24b2d60879bff54b",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1939949,
+      "generationRecord": "supporting-acting-generation.json",
+      "purpose": "Contextual character acting atlas, runtime chroma compositing"
+    },
+    {
+      "file": "ivo-idle-speaking-v1.png",
+      "sha256": "7b4e77dae0261079eab7417af8f348bde28f213003391b7e7c43cc0a0a31fc4f",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1798103,
+      "generationRecord": "ivo-motion-generation.json",
+      "purpose": "Idle/speaking and motion sprites. Timed browser QA required."
+    },
+    {
+      "file": "ivo-walk-v1.png",
+      "sha256": "46f5fc31e91f990154d6b05d84149c9920401a019abfd896bbb913a28edcf966",
+      "width": 1774,
+      "height": 887,
+      "bytes": 1714919,
+      "generationRecord": "ivo-motion-generation.json",
+      "purpose": "Idle/speaking and motion sprites. Timed browser QA required."
+    }
+  ]
+}

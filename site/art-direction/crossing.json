@@ -1,0 +1,11 @@
+{
+  "asset": "crossing",
+  "created": "2026-09-15",
+  "generator": "OpenAI built-in image generation",
+  "purpose": "Original promotional concept art, not implemented gameplay",
+  "prompt": "Use case: stylized-concept\nAsset type: cinematic 2400 by 1400 landscape hero artwork for Runtime Story SDK, an independent developer tool for games.\nPrimary request: Create an extraordinary original dark fantasy game key art, art-directed like a hand-painted cinematic oil illustration for a premium game studio. The website direction combines painterly fantasy with an old tactical-game command console. This is just the artwork, no interface and NO text.\nScene: A vast ruined stone bridge over a misty gorge at blue hour, a distant mountain citadel, warm amber lanterns, autumn trees, a small blue cloaked traveler and a companion looking toward two possible paths. Broken span foreground center-right, a ferry with one warm light far below, and the faint winding trail on the far gorge face. Their world feels tactile, ancient and mysterious.\nComposition: ultra wide 16:9 or 12:7 panoramic illustration. Main gorge, broken bridge and travelers on the RIGHT TWO THIRDS. LEFT THIRD is rich dark pine forest and atmospheric blue mist, quiet enough to support white typography added by the website. A warm sun shaft lights distant towers in upper right. Dramatic depth from foreground bark and rocks to cathedral-like far mountains.\nStyle: sophisticated painterly fantasy concept art, traditional gouache and oil brushwork combined with cinematic matte painting, believable architecture, expressive fine detail without visual noise. Deep midnight navy shadows, desaturated teal forest, antique gold highlights, tiny ember orange lights. Beautiful dark fantasy landscape, hopeful rather than horror.\nConstraints: wholly original characters and world, no existing franchise characters, no logos, no lettering, no watermark, no interface, no text, no border, no grids. Do not imitate a specific artist. This is atmospheric promotional art, not a claimed game screenshot.",
+  "original": "crossing.png",
+  "originalRetained": "site/generated-originals (excluded from Git and deployment)",
+  "defaultOutputBasename": "exec-f151081f-3346-4d23-887c-e670bfe67d19.png",
+  "webAsset": "site/assets/crossing.webp"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "runtime-story-sdk",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "workspaces": [
+    "packages/runtime-story",
+    "examples/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "check": "npm test && npm run art:check && npm run site:check",
+    "art:check": "node examples/off-script/scripts/verify-art.mjs && node scripts/verify-emberwake-art.mjs",
+    "site:check": "node scripts/check-site.mjs",
+    "demo:off-script": "npm start --workspace=@runtime-story/off-script",
+    "demo:emberwake": "npm start --workspace=@runtime-story/emberwake",
+    "demo:relay-station": "npm start --workspace=@runtime-story/relay-station",
+    "site:dev": "node scripts/serve-site.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}

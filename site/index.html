@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c1317" />
+    <meta
+      name="description"
+      content="Turn free-form player intentions into validated, playable plans. An open-source runtime for game-owned mechanics, built for the OpenAI × Tokyo AI 100-Hour Game Challenge."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Runtime Story SDK · Your world. Their next move."
+    />
+    <meta
+      property="og:description"
+      content="Players set the intention. OpenAI proposes the plan. Your game keeps control."
+    />
+    <meta
+      property="og:url"
+      content="https://cyberlane.github.io/runtime-story-sdk/"
+    />
+    <meta
+      property="og:image"
+      content="https://cyberlane.github.io/runtime-story-sdk/assets/crossing.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      href="assets/fonts/barlow-condensed-semibold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <title>Runtime Story SDK · Your world. Their next move.</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="masthead">
+      <a class="brand" href="#" aria-label="Runtime Story SDK home"
+        ><img src="assets/mark.svg" width="38" height="38" alt="" /><span
+          >RUNTIME STORY<span class="brand-sub">SDK / BY CYBERLANE</span></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#system">The system</a>
+        <a href="#worlds">The worlds</a>
+        <a href="#build">Start building</a>
+      </nav>
+      <a
+        class="nav-source"
+        href="https://github.com/Cyberlane/runtime-story-sdk"
+        ><span>VIEW SOURCE</span
+        ><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M7 17 17 7M7 7h10v10" /></svg
+      ></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <picture class="hero-picture"
+          ><source
+            media="(max-width: 640px)"
+            srcset="assets/crossing-mobile.webp" />
+          <img
+            src="assets/crossing.webp"
+            width="1642"
+            height="958"
+            fetchpriority="high"
+            alt="A traveler stands before a broken crossing, with a lantern-lit ferry below and another trail in the mountains."
+        /></picture>
+        <div class="hero-shade"></div>
+        <div class="hero-coordinates" aria-hidden="true">
+          RUNTIME STORY / WORLD 001<br />INTENT → CONSEQUENCE
+        </div>
+        <div class="hero-content page-width">
+          <p class="eyebrow">
+            <span class="signal"></span> OPENAI × TOKYO AI · 100-HOUR GAME
+            CHALLENGE
+          </p>
+          <h1 id="hero-title">
+            YOUR WORLD.<br />THEIR <span>NEXT MOVE.</span>
+          </h1>
+          <p class="hero-intro">
+            Players set the intention.<br />OpenAI proposes the plan.<br /><strong
+              >Your game keeps control.</strong
+            >
+          </p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#build"
+              >BUILD WITH THE SDK <span aria-hidden="true">↗</span></a
+            ><a class="button button-ghost" href="#transmission"
+              ><span class="play-small" aria-hidden="true">▶</span> WATCH THE
+              DEMO</a
+            >
+          </div>
+          <p class="hero-footnote">OPEN SOURCE / MIT CODE / NODE.JS 22.12+</p>
+        </div>
+        <a class="scroll-cue" href="#system"
+          ><span aria-hidden="true">↓</span> EXPLORE THE SYSTEM</a
+        >
+        <span class="hero-edition" aria-hidden="true"
+          >FIELD EDITION<br /><b>2026 / 09</b></span
+        >
+      </section>
+
+      <div class="status-rail" aria-label="SDK principles">
+        <span><i></i> BOUNDED BY YOUR RULES</span
+        ><span>EXPLICIT PLAYER ACCEPTANCE</span
+        ><span>RECORDED CONSEQUENCES</span
+        ><span class="rail-end">TRACK 02 <b>GAME PRODUCTION TOOLS</b></span>
+      </div>
+
+      <section
+        id="system"
+        class="system-section page-width section-space"
+        aria-labelledby="system-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">01 / THE RUNTIME</p>
+          <span class="section-rule" aria-hidden="true"></span>
+          <p class="small-mono">HUMAN INTENT. GAME AUTHORITY.</p>
+        </div>
+        <div class="system-intro">
+          <h2 id="system-title">
+            THE STORY IS OPEN.<br /><span>THE RULES ARE YOURS.</span>
+          </h2>
+          <p>
+            A player wants to rescue a friend without harming the creature in
+            the way. Your game already has the actions. Runtime Story connects
+            that intention to a plan your game can actually execute.
+          </p>
+        </div>
+        <div class="principles">
+          <article>
+            <span class="principle-number">01</span>
+            <div>
+              <h3>REGISTER THE POSSIBLE</h3>
+              <p>
+                Describe your actions, state and constraints. Keep the
+                mechanics, resources and success conditions in ordinary game
+                code.
+              </p>
+              <code>createRegistry()</code>
+            </div>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <div>
+              <h3>MAKE ROOM FOR INTENT</h3>
+              <p>
+                OpenAI composes registered actions into a candidate plan. The
+                runtime checks schemas and simulates its consequences.
+              </p>
+              <code>planIntent()</code>
+            </div>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <div>
+              <h3>COMMIT WHAT HAPPENS</h3>
+              <p>
+                The player accepts. Your host executes exact steps and records
+                receipts. Revise unfinished work when the world changes.
+              </p>
+              <code>accept() → step()</code>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="console-section section-space"
+        aria-labelledby="console-title"
+      >
+        <div class="console-backdrop" aria-hidden="true"></div>
+        <div class="page-width console-layout">
+          <div class="console-copy">
+            <p class="eyebrow">02 / INSIDE THE LOOP</p>
+            <h2 id="console-title">
+              A PLAN CAN CHANGE.<br /><span>A PROMISE<br />STILL MATTERS.</span>
+            </h2>
+            <p>
+              When a crossing collapses, the next route can change. The rescued
+              friend, the supplies already spent and the accepted promise to
+              spare the wolf stay part of the world.
+            </p>
+            <a
+              class="text-link"
+              href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/ARCHITECTURE.md"
+              >EXAMINE THE ARCHITECTURE <span aria-hidden="true">↗</span></a
+            >
+            <p class="walkthrough-note">
+              Interactive walkthrough<br />Illustrative states, no live model
+              calls.
+            </p>
+          </div>
+          <div class="mission-console">
+            <div class="console-topbar">
+              <span><i class="signal"></i> EMBERWAKE / MISSION CONTROL</span
+              ><span aria-hidden="true">[ RS-01 ]</span>
+            </div>
+            <div
+              class="console-tabs"
+              role="tablist"
+              aria-label="Explore the runtime lifecycle"
+            >
+              <button
+                type="button"
+                id="tab-propose"
+                role="tab"
+                aria-selected="true"
+                aria-controls="mission-panel"
+                data-stage="propose"
+              >
+                01 <span>PROPOSE</span>
+              </button>
+              <button
+                type="button"
+                id="tab-accept"
+                role="tab"
+                aria-selected="false"
+                aria-controls="mission-panel"
+                tabindex="-1"
+                data-stage="accept"
+              >
+                02 <span>ACCEPT</span>
+              </button>
+              <button
+                type="button"
+                id="tab-execute"
+                role="tab"
+                aria-selected="false"
+                aria-controls="mission-panel"
+                tabindex="-1"
+                data-stage="execute"
+              >
+                03 <span>EXECUTE</span>
+              </button>
+              <button
+                type="button"
+                id="tab-revise"
+                role="tab"
+                aria-selected="false"
+                aria-controls="mission-panel"
+                tabindex="-1"
+                data-stage="revise"
+              >
+                04 <span>REVISE</span>
+              </button>
+            </div>
+            <div
+              id="mission-panel"
+              class="mission-panel"
+              role="tabpanel"
+              aria-labelledby="tab-propose"
+              tabindex="0"
+            >
+              <div class="mission-status">
+                <span id="mission-label">CANDIDATE PLAN</span
+                ><span id="mission-badge">HOST VALIDATED</span>
+              </div>
+              <blockquote id="mission-intent">
+                “Rescue Lark. Bring the Dawnseed home.<br />Spare the wolf. Keep
+                both potions.”
+              </blockquote>
+              <div class="mission-map" aria-hidden="true">
+                <img
+                  src="assets/emberwake-map.webp"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                  alt=""
+                /><svg viewBox="0 0 520 165" preserveAspectRatio="none">
+                  <path
+                    class="route-old"
+                    d="M48 127 136 95 170 38 290 30 369 105 455 61"
+                  />
+                  <path
+                    class="route-new"
+                    d="M455 61 376 28 284 30 170 38 136 95 48 127"
+                  />
+                  <g class="route-nodes">
+                    <circle cx="48" cy="127" r="5" />
+                    <circle cx="136" cy="95" r="5" />
+                    <circle cx="170" cy="38" r="5" />
+                    <circle cx="290" cy="30" r="5" />
+                    <circle cx="369" cy="105" r="5" />
+                    <circle cx="455" cy="61" r="5" />
+                  </g></svg
+                ><span class="map-start">LANTERN CAMP</span
+                ><span class="map-end">DAWNSEED SHRINE</span>
+              </div>
+              <div id="mission-facts" class="mission-facts">
+                <span>WOLF <b>PROTECTED</b></span
+                ><span>POTIONS <b>2 / 2</b></span
+                ><span>LARK <b>TO RESCUE</b></span>
+              </div>
+              <div class="mission-explanation">
+                <span id="mission-icon" aria-hidden="true">◇</span>
+                <p id="mission-detail">
+                  A proposal is checked against registered mechanics and the
+                  current world. Nothing has executed yet.
+                </p>
+              </div>
+              <div class="console-bottom">
+                <code id="mission-method">await planIntent(…)</code
+                ><button type="button" id="next-stage">
+                  NEXT: ACCEPT <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+            <div class="console-footer">
+              <span>GAME STATE IS AUTHORITATIVE</span
+              ><span>● CONNECTED TO YOUR RULES</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="transmission"
+        class="transmission page-width section-space"
+        aria-labelledby="video-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">03 / FIELD RECORDING</p>
+          <span class="section-rule" aria-hidden="true"></span>
+          <p class="small-mono">ONE MINUTE. THE ACTUAL TOOL.</p>
+        </div>
+        <div class="transmission-title">
+          <h2 id="video-title">SEE INTENT<br /><span>BECOME PLAY.</span></h2>
+          <div>
+            <p>
+              From a registered action to a revised route. Watch the developer
+              demo and the games it powers.
+            </p>
+            <a href="https://youtu.be/iSmP1_tJRds" class="text-link"
+              >WATCH ON YOUTUBE <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <div class="video-frame" id="video-frame">
+          <a
+            class="video-poster"
+            href="https://youtu.be/iSmP1_tJRds"
+            id="load-video"
+            aria-label="Play the Runtime Story SDK developer demo from YouTube"
+            ><img
+              src="assets/emberwake-gameplay.webp"
+              loading="lazy"
+              width="1280"
+              height="720"
+              alt="Actual Emberwake gameplay after the crossing breaks. Lark is rescued, the Dawnseed is recovered, and the remaining route can be revised."
+            /><span class="video-shade"></span
+            ><span class="play-disc" aria-hidden="true">▶</span
+            ><span class="video-caption"
+              ><span>RUNTIME STORY SDK</span><strong>DEVELOPER DEMO</strong
+              ><span>OPENAI GAME CHALLENGE / 2026</span></span
+            ><span class="video-duration">01:00</span></a
+          >
+        </div>
+        <p class="video-note">
+          Edited demonstration using retained live OpenAI plans and executed
+          outcomes. Playback loads YouTube only when you press play.
+        </p>
+      </section>
+
+      <section
+        id="worlds"
+        class="worlds-section section-space"
+        aria-labelledby="worlds-title"
+      >
+        <div class="page-width">
+          <div class="section-heading">
+            <p class="eyebrow">04 / SAME RUNTIME. DIFFERENT WORLDS.</p>
+            <span class="section-rule" aria-hidden="true"></span>
+          </div>
+          <div class="worlds-heading">
+            <h2 id="worlds-title">
+              BRING YOUR<br /><span>OWN UNIVERSE.</span>
+            </h2>
+            <p>
+              The SDK owns the plan lifecycle.<br />Each game owns what its
+              actions mean.
+            </p>
+          </div>
+          <div class="world-grid">
+            <a
+              class="world-card emberwake-card"
+              href="https://github.com/Cyberlane/runtime-story-sdk/tree/main/examples/emberwake"
+              ><img
+                src="assets/crossing.webp"
+                loading="lazy"
+                width="1642"
+                height="958"
+                alt="Painted fantasy gorge with a broken stone crossing."
+              /><span class="world-index">WORLD / 01</span>
+              <div class="world-copy">
+                <span class="eyebrow">TACTICAL RPG</span>
+                <h3>EMBERWAKE</h3>
+                <p>
+                  Spare the wolf. Rescue your companion. Find another way home
+                  when the crossing breaks.
+                </p>
+                <span class="world-link"
+                  >EXPLORE THE DEMO <span aria-hidden="true">↗</span></span
+                >
+              </div></a
+            >
+            <a
+              class="world-card offscript-card"
+              href="https://github.com/Cyberlane/runtime-story-sdk/tree/main/examples/off-script"
+              ><img
+                src="assets/warehouse.webp"
+                loading="lazy"
+                width="1672"
+                height="941"
+                alt="Painted harbor warehouse with a ledger, two negotiators and a closed iron gate."
+              /><span class="world-index">WORLD / 02</span>
+              <div class="world-copy">
+                <span class="eyebrow">NARRATIVE NEGOTIATION</span>
+                <h3>OFF SCRIPT</h3>
+                <p>
+                  Choose what evidence to share, protect identities and
+                  renegotiate after the gate closes.
+                </p>
+                <span class="world-link"
+                  >EXPLORE THE DEMO <span aria-hidden="true">↗</span></span
+                >
+              </div></a
+            >
+            <a
+              class="world-card relay-card"
+              href="https://github.com/Cyberlane/runtime-story-sdk/tree/main/examples/relay-station"
+              ><img
+                src="assets/relay.webp"
+                loading="lazy"
+                width="1672"
+                height="941"
+                alt="Painted communications relay station on a moon beneath a ringed planet."
+              /><span class="world-index">WORLD / 03</span>
+              <div class="world-copy">
+                <span class="eyebrow">RESOURCE MANAGEMENT</span>
+                <h3>RELAY STATION</h3>
+                <p>
+                  Repair the station. Manage power and heat. Decide which
+                  discoveries leave your radio.
+                </p>
+                <span class="world-link"
+                  >EXPLORE THE DEMO <span aria-hidden="true">↗</span></span
+                >
+              </div></a
+            >
+          </div>
+          <p class="worlds-footnote">
+            Independent examples. Shared validation, acceptance, execution
+            records, revision and checkpoint restoration.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="build"
+        class="build-section page-width section-space"
+        aria-labelledby="build-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">05 / DEVELOPER ACCESS</p>
+          <span class="section-rule" aria-hidden="true"></span>
+          <p class="small-mono">READ THE CODE. BUILD THE NEXT WORLD.</p>
+        </div>
+        <div class="build-heading">
+          <h2 id="build-title">
+            YOUR ENGINE.<br /><span>YOUR FIRST INTEGRATION.</span>
+          </h2>
+          <p>
+            Start with a tiny offline example. Add a model on your server when
+            the game rules are ready.
+          </p>
+        </div>
+        <div class="install-panel">
+          <div>
+            <span class="eyebrow">START HERE</span>
+            <h3>ONE CLEAR PATH TO A WORKING PLAN.</h3>
+            <p>
+              Clone, install, run the smallest example, then wire it into your
+              engine. The quickstart explains every step.
+            </p>
+            <a
+              class="button button-gold"
+              href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/QUICKSTART.md"
+              >OPEN THE QUICKSTART <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="code-panel">
+            <div class="code-title">
+              <span>TERMINAL</span><span>NODE.JS 22.12+</span>
+            </div>
+            <pre><code><span class="code-muted"># Get the source</span>
+git clone https://github.com/Cyberlane/runtime-story-sdk.git
+cd runtime-story-sdk
+
+<span class="code-muted"># Install the workspace</span>
+npm ci
+
+<span class="code-muted"># Verify the SDK and examples</span>
+npm test</code></pre>
+            <a
+              class="code-bottom"
+              href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/QUICKSTART.md"
+              >CONTINUE TO YOUR FIRST PLAN <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </div>
+        <div class="engine-grid">
+          <a
+            class="engine-link"
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/integrations/WEB.md"
+            ><span class="engine-symbol" aria-hidden="true">&lt;/&gt;</span
+            ><span
+              ><strong>WEB / NODE.JS</strong
+              ><small>Reference host + browser client</small></span
+            ><span class="engine-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="engine-link"
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/integrations/GODOT.md"
+            ><span class="engine-symbol engine-godot" aria-hidden="true">G</span
+            ><span
+              ><strong>GODOT</strong
+              ><small>Native HTTP client tutorial</small></span
+            ><span class="engine-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="engine-link"
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/integrations/UNITY.md"
+            ><span class="engine-symbol" aria-hidden="true">U</span
+            ><span
+              ><strong>UNITY</strong
+              ><small>C# integration walkthrough</small></span
+            ><span class="engine-arrow" aria-hidden="true">↗</span></a
+          >
+          <a
+            class="engine-link"
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/integrations/UNREAL.md"
+            ><span class="engine-symbol engine-unreal" aria-hidden="true"
+              >U</span
+            ><span
+              ><strong>UNREAL ENGINE</strong
+              ><small>C++ integration walkthrough</small></span
+            ><span class="engine-arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="scope-note">
+          <span class="eyebrow">KNOW THE BOUNDARY</span>
+          <p>
+            This is an early developer SDK with local demonstration hosts. It
+            needs your own persistence, authentication and deployment design for
+            a hosted game. Unity and Unreal examples have not been compiled or
+            run. Every guide states its verified scope.
+          </p>
+          <a
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/KNOWN-LIMITATIONS.md"
+            class="text-link"
+            >PRODUCTION CONSIDERATIONS <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+
+      <section class="closing-banner" aria-labelledby="closing-title">
+        <img
+          src="assets/warehouse.webp"
+          loading="lazy"
+          width="1672"
+          height="941"
+          alt=""
+        />
+        <div class="page-width">
+          <p class="eyebrow">
+            BUILT FOR THE 100-HOUR CHALLENGE. OPEN FOR WHAT COMES NEXT.
+          </p>
+          <h2 id="closing-title">
+            THE NEXT STORY<br /><span>IS YOURS TO BUILD.</span>
+          </h2>
+          <a
+            class="button button-gold"
+            href="https://github.com/Cyberlane/runtime-story-sdk"
+            >GET RUNTIME STORY SDK <span aria-hidden="true">↗</span></a
+          >
+          <p>
+            Created for the OpenAI × Tokyo AI 100-Hour Game Challenge.<br />Track
+            2 · Game Production Tools · September 2026
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-width site-footer">
+      <div class="footer-top">
+        <a class="brand" href="#"
+          ><img src="assets/mark.svg" width="32" height="32" alt="" /><span
+            >RUNTIME STORY<span class="brand-sub"
+              >SDK / BY CYBERLANE</span
+            ></span
+          ></a
+        >
+        <nav aria-label="Footer">
+          <a href="https://github.com/Cyberlane/runtime-story-sdk">GitHub</a
+          ><a
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/docs/QUICKSTART.md"
+            >Documentation</a
+          ><a href="https://youtu.be/iSmP1_tJRds">YouTube</a
+          ><a
+            href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/LICENSE"
+            >MIT license</a
+          >
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Cyberlane. Code released under the MIT license.<br />Original
+          promotional artwork generated with OpenAI. World paintings are concept
+          art. The video poster is actual demo gameplay.
+        </p>
+        <a
+          href="https://github.com/Cyberlane/runtime-story-sdk/blob/main/site/art-direction/PROVENANCE.md"
+          >ARTWORK &amp; TYPE CREDITS <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

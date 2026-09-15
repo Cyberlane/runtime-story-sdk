@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Emberwake · An RPG shaped by your intentions</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="loading" role="status">
+      <div class="loading-sigil">E</div>
+      <h2>Entering Lantern Reach</h2>
+      <p>Preparing your expedition…</p>
+    </div>
+    <header>
+      <a class="brand" href="/"
+        >EMBER<span>WAKE</span><small>THE DAWNSEED EXPEDITION</small></a
+      >
+      <div class="quest" aria-label="Expedition objectives">
+        <span id="questLark">◇ Rescue Lark</span
+        ><span id="questRelic">◇ Recover the Dawnseed</span
+        ><span id="questHome">◇ Return home</span>
+      </div>
+      <button id="menu" class="quiet">Journal & settings</button>
+    </header>
+    <main>
+      <section class="adventure" aria-label="RPG map and actions">
+        <div class="party">
+          <div class="party-portraits" aria-hidden="true">
+            <span class="portrait rowan"></span
+            ><span id="larkPortrait" class="portrait lark" hidden></span>
+          </div>
+          <div>
+            <b>Rowan <span id="companion"></span></b
+            ><small>RANGER OF LANTERN REACH</small>
+          </div>
+          <div class="stat">
+            <label id="hpText"></label><meter id="hp" min="0" max="14"></meter>
+          </div>
+          <div class="stat focus">
+            <label id="focusText"></label
+            ><meter id="focus" min="0" max="6"></meter>
+          </div>
+          <div id="pack" class="pack"></div>
+        </div>
+        <div class="map-wrap">
+          <canvas
+            id="map"
+            width="960"
+            height="704"
+            aria-label="Top-down forest map. Use the named location buttons to travel, or arrow keys along connected paths."
+          ></canvas>
+          <div id="places" aria-label="Map locations"></div>
+          <div class="map-caption">
+            <span id="weather">LANTERN REACH · BEFORE THE STORM</span
+            ><small
+              >Click a connected trail • Arrows to travel • E to interact</small
+            >
+          </div>
+          <div id="toast" role="status" hidden></div>
+          <div id="battle" class="battle" hidden></div>
+        </div>
+      </section>
+      <aside>
+        <section class="location">
+          <div>
+            <small id="locationKind"></small>
+            <h1 id="locationName"></h1>
+            <p id="locationText"></p>
+          </div>
+          <div id="actions" class="actions"></div>
+        </section>
+        <div class="planner-content">
+          <div class="planner-title">
+            <span class="sigil">✧</span>
+            <div>
+              <small>RUNTIME STORY SDK</small>
+              <h2>Your expedition, your terms.</h2>
+            </div>
+          </div>
+          <p class="lead">
+            Choose a destination on the map, or describe a goal. The tool
+            composes your RPG mechanics into a route you can actually play.
+          </p>
+          <div class="suggestions">
+            <button
+              data-intent="Rescue Lark, recover the Dawnseed and bring us home. Keep the ash wolf alive, use no potions, and finish with at least 10 health."
+            >
+              A merciful expedition</button
+            ><button
+              data-intent="Rescue Lark and recover the Dawnseed. Fight the shrine sentinel instead of sneaking. Bring us home with at least 8 health, using no more than one potion."
+            >
+              Steel and courage
+            </button>
+          </div>
+          <form id="intentForm">
+            <label for="intent">What matters to you?</label
+            ><textarea
+              id="intent"
+              required
+              minlength="3"
+              maxlength="3000"
+              placeholder="Save the scout, take the relic, spare the wolf…"
+            ></textarea
+            ><button id="propose" class="primary" type="submit">
+              Find a way
+            </button>
+          </form>
+          <div id="planning" role="status" hidden>
+            <span class="spinner"></span><b>Composing supported mechanics…</b>
+            <p>
+              No actions happen while you wait. The host checks the entire
+              route.
+            </p>
+            <small id="elapsed"></small>
+          </div>
+          <div id="error" role="alert" hidden></div>
+          <section id="plan" hidden></section>
+          <button id="explain" class="text-button">
+            What is the tool doing?
+          </button>
+          <div class="trail">
+            <small>CONFIRMED CONSEQUENCES</small>
+            <ol id="events"></ol>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <dialog id="intro">
+      <small>A PLAYABLE TACTICAL RPG</small>
+      <h2>Bring them home.<br /><em>Your way.</em></h2>
+      <p>
+        The storm is coming. Scout Lark is missing in the ruins, and the
+        Dawnseed still glows inside a guarded shrine.
+      </p>
+      <p>
+        Explore the trails. Fight with timing, sneak past danger, or make peace.
+        Your health, supplies and promises stay real when the plan changes.
+      </p>
+      <div class="intro-controls">
+        <span>Explore a living map</span><span>Read enemy attacks</span
+        ><span>Write your own goal</span>
+      </div>
+      <button id="begin" class="primary">Begin expedition →</button
+      ><small>Click or keyboard • A short adventure • No audio required</small>
+    </dialog>
+    <dialog id="journal">
+      <button data-close class="close">Close ×</button
+      ><small>YOUR FIELD JOURNAL</small>
+      <h2>Keep what happened.</h2>
+      <p>
+        Save the world, accepted promises and completed effects together.
+        Loading creates a new timeline branch.
+      </p>
+      <div class="buttons">
+        <button id="save">Save checkpoint</button
+        ><button id="load">Restore checkpoint</button
+        ><button id="restart">New expedition</button>
+      </div>
+      <label class="check"
+        ><input id="reduced" type="checkbox" /> Reduce motion</label
+      >
+      <p class="hint">
+        Arrows: travel. E: interact. In combat, 1: strike, 2: power, 3: guard.
+        H: drink a potion. Direct play uses the same rules as generated plans.
+        An action outside the plan interrupts its remaining route.
+      </p>
+      <p id="saveStatus" role="status"></p>
+      <div id="journalEntries"></div>
+    </dialog>
+    <dialog id="about">
+      <button data-close class="close">Close ×</button
+      ><small>MECHANICS ARE AUTHORED. YOUR ROUTE IS COMPOSED.</small>
+      <h2>Intent → plan → playable consequences.</h2>
+      <p>
+        You describe an outcome and constraints. Live OpenAI selects from nine
+        registered mechanics. The unchanged Runtime Story SDK simulates every
+        step against the actual RPG state. Review the terms before accepting.
+      </p>
+      <p>
+        <b>You still play.</b> Every step changes real health, inventory,
+        enemies, companions or travel. Choose a different action and the tool
+        must replan around it. The storm is an authored event. The replacement
+        sequence is generated.
+      </p>
+      <p>
+        Without inference, all manual RPG controls still work. What disappears
+        is interpreting an unfamiliar request and composing a custom checked
+        route. There is no hidden library of complete routes and no automatic
+        invention of new mechanics.
+      </p>
+      <p class="hint">
+        This is a local, single-player demonstration. The same package also
+        powers Off Script and Relay Station. Planning speed and human time
+        savings are not claimed. Inspect the expedition report and game adapter
+        in the project for evidence.
+      </p>
+    </dialog>
+    <dialog id="ending">
+      <button data-close class="close">Keep exploring ×</button
+      ><small>EXPEDITION COMPLETE</small>
+      <h2>A light worth<br /><em>bringing home.</em></h2>
+      <p id="endingText"></p>
+      <div id="endingStats" class="ending-stats"></div>
+      <p id="endingTool"></p>
+      <div class="buttons">
+        <button id="endingJournal">Read your expedition</button
+        ><button id="endingRestart">Play another way</button>
+      </div>
+    </dialog>
+    <dialog id="confirmReset">
+      <h2>A new expedition?</h2>
+      <p>
+        The current world will be replaced. Your saved checkpoint remains
+        available.
+      </p>
+      <button id="resetYes">Start again</button
+      ><button data-close>Keep exploring</button>
+    </dialog>
+    <script type="module" src="/game.js"></script>
+  </body>
+</html>

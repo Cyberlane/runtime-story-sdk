@@ -1,0 +1,14 @@
+{
+  "name": "@runtime-story/off-script",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --env-file-if-exists=../../.env server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@off-script/runtime-story": "0.2.0"
+  }
+}

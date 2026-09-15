@@ -1,0 +1,42 @@
+{
+  "name": "@off-script/runtime-story",
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Validated player-intent plans over game-owned capabilities and state",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./providers": "./src/provider.mjs"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "ajv": "8.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyberlane/runtime-story-sdk.git",
+    "directory": "packages/runtime-story"
+  },
+  "author": "Justin Nel (Cyberlane)",
+  "homepage": "https://cyberlane.github.io/runtime-story-sdk/",
+  "bugs": {
+    "url": "https://github.com/Cyberlane/runtime-story-sdk/issues"
+  },
+  "keywords": [
+    "game-development",
+    "narrative",
+    "planning",
+    "openai",
+    "game-engine"
+  ]
+}

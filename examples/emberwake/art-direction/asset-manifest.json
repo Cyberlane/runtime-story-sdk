@@ -1,0 +1,143 @@
+{
+  "status": "locally-visually-verified",
+  "generatedWith": "built-in image_gen",
+  "date": "2026-09-13",
+  "assets": [
+    {
+      "file": "ferry-atlas-v1.png",
+      "sha256": "0c242fd0e17e0c925651089cb5a977264eeb29a088ab9a1465dd8e0d9c6c8b21",
+      "bytes": 2045820,
+      "width": 1536,
+      "height": 1024,
+      "kind": "animation-atlas",
+      "columns": 3,
+      "rows": 2,
+      "generationKey": "emberwake_ferry_atlas_generation"
+    },
+    {
+      "file": "ferry-river-calm-v1.png",
+      "sha256": "4381f9f37dc2e62159b8d343655d8605714789bbc0b25571e2e74059d863b840",
+      "bytes": 3264606,
+      "width": 1536,
+      "height": 1024,
+      "kind": "environment",
+      "generationKey": "emberwake_ferry_calm_generation"
+    },
+    {
+      "file": "ferry-river-storm-v1.png",
+      "sha256": "4b09bb09b2a4c48b48fc59ad36718b1dd3bbfd006cdc7c70f4cc4bd3ded13c3e",
+      "bytes": 3429141,
+      "width": 1536,
+      "height": 1024,
+      "kind": "environment",
+      "generationKey": "emberwake_ferry_background_generation"
+    },
+    {
+      "file": "lantern-reach-storm-v1.png",
+      "sha256": "c3fc770810d69399b77a4e781945f272fe5de7d7e014f47164072301ddc63859",
+      "bytes": 3490643,
+      "width": 1536,
+      "height": 1024,
+      "kind": "environment",
+      "generationKey": "emberwake_storm_generation"
+    },
+    {
+      "file": "lantern-reach-v1.png",
+      "sha256": "67e4e6fac505733ce3a2df41b8648220f7afcc648506312c715719b29769b197",
+      "bytes": 3846147,
+      "width": 1536,
+      "height": 1024,
+      "kind": "environment",
+      "generationKey": "emberwake_environment_generation"
+    },
+    {
+      "file": "lark-atlas-v1.png",
+      "sha256": "0aad5cca53c206942e9b9912ef92d0a2f4a89b25a835f04259bc7a28164327c0",
+      "bytes": 2131667,
+      "width": 1536,
+      "height": 1024,
+      "kind": "animation-atlas",
+      "columns": 6,
+      "rows": 4,
+      "generationKey": "emberwake_lark_generation"
+    },
+    {
+      "file": "party-portraits-v1.png",
+      "sha256": "c2ef94ed5da3e33436d19d797e9ff0cb6cf4a72af3a8922ae7979cd5014f8bff",
+      "bytes": 2859264,
+      "width": 1774,
+      "height": 887,
+      "kind": "portrait-sheet",
+      "generationKey": "emberwake_portrait_generation"
+    },
+    {
+      "file": "rowan-atlas-v1.png",
+      "sha256": "1d5389ee8e7ad0cbfcd0b2a24910bdcf18342ff65f485dc987888307238b9036",
+      "bytes": 2088340,
+      "width": 1536,
+      "height": 1024,
+      "kind": "animation-atlas",
+      "columns": 6,
+      "rows": 4,
+      "generationKey": "emberwake_rowan_keyed_generation"
+    },
+    {
+      "file": "sentinel-atlas-v1.png",
+      "sha256": "fd1a3412f7df0bca256c74ddc4bd8c03a18c6ba5b80805bafe018d135ac11de5",
+      "bytes": 2767915,
+      "width": 1536,
+      "height": 1024,
+      "kind": "animation-atlas",
+      "columns": 6,
+      "rows": 4,
+      "generationKey": "emberwake_sentinel_generation"
+    },
+    {
+      "file": "shrine-arena-v1.png",
+      "sha256": "77b68a40394a28bd2ba6724f962882c8d79a3bc01c1fdbc44fdecbb685cb8c19",
+      "bytes": 3280145,
+      "width": 1536,
+      "height": 1024,
+      "kind": "environment",
+      "generationKey": "emberwake_shrine_arena_generation"
+    },
+    {
+      "file": "wolf-atlas-v1.png",
+      "sha256": "0f893570be044cf2e7b69224fda22e03426e2cb555ec832338daa0fbb4254b55",
+      "bytes": 2331064,
+      "width": 1536,
+      "height": 1024,
+      "kind": "animation-atlas",
+      "columns": 6,
+      "rows": 4,
+      "generationKey": "emberwake_wolf_keyed_generation"
+    },
+    {
+      "file": "wolf-hollow-arena-v1.png",
+      "sha256": "e01954ddb50da365a6fb87ad9a49a2a6c307c4e1665e8459e2278291e5b548f8",
+      "bytes": 3250579,
+      "width": 1536,
+      "height": 1024,
+      "kind": "environment",
+      "generationKey": "emberwake_forest_arena_generation"
+    },
+    {
+      "file": "rowan-walk-rig-v2.png",
+      "sha256": "d91706ae6199e40423c249041235a52c5c703e96a686a7ad5eb713ccd9685913",
+      "bytes": 1744983,
+      "width": 1536,
+      "height": 1024,
+      "kind": "articulated-character-parts",
+      "generationKey": "rowanRig"
+    },
+    {
+      "file": "lark-walk-rig-v2.png",
+      "sha256": "08916addd1300fcd9ba4e9532e26f219e9a82b5a4b041e8dac1fea462ef60cf9",
+      "bytes": 1760628,
+      "width": 1536,
+      "height": 1024,
+      "kind": "articulated-character-parts",
+      "generationKey": "larkRig"
+    }
+  ]
+}

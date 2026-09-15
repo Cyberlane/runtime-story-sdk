@@ -1,0 +1,29 @@
+[
+  {
+    "key": "emberwake_ferry_background_generation",
+    "prompt": "Production environment background for Emberwake, matching the supplied painted woodland fantasy game map. A cinematic river ferry crossing seen from an elevated three-quarter camera looking along a wide turquoise forest river at cool stormy dusk. 3:2 landscape image. Water fills the central 70 percent and lower half with readable horizontal travel space, wet mossy stone riverbanks and tall fir trees frame the far left and right. Warm tiny lanterns on a safe modest wooden landing on each bank, left landing in left 12 percent, right landing in right 12 percent. Misty layered forest depth, rainy teal atmosphere, beautiful hand-painted premium RPG finish, detailed natural textures and restrained warm highlights. Slow navigable reach downstream of the rapids, not dangerous whitewater. No boats, no people, no creatures, no text, no UI. This will be an actual animated ferry travel background, keep central water unobstructed for a boat sprite. Composition should be a real river with banks at sides, not an arena or swimming pool.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "ferry-river-storm-v1.png",
+    "status": "selected",
+    "originalSha256": "4b09bb09b2a4c48b48fc59ad36718b1dd3bbfd006cdc7c70f4cc4bd3ded13c3e"
+  },
+  {
+    "key": "emberwake_ferry_atlas_generation",
+    "prompt": "Create a production BOAT ANIMATION ATLAS for Emberwake matching the supplied two portraits and painted forest style. Exactly THREE columns by TWO rows, SIX equal square cells, overall 1536x1024. Each cell shows the SAME small weathered wooden rowing boat carrying exactly two people: Rowan (first/left portrait, mustard gold cloak, brown hair tied back) seated in the bow, and Lark (second/right portrait, brown skin, short dark curly hair, blue-gray cloak) rowing in the middle. Boat points LEFT, viewed from elevated three-quarter side camera so the interior and both figures are visible. Whole boat, passengers and BOTH oars fully fit inside each 512x512 cell, generous 32px empty margin. Each boat at same scale, centered, horizontal hull baseline y400 in each cell. SIX distinct sequential rowing poses read left-to-right top row then bottom row: oars forward above surface, blades enter, pull halfway, full pull, blades lift, recovery forward. Keep boat and seated Rowan consistent across frames; Lark's arms and oars move visibly and physically plausibly. Exquisite painterly premium fantasy RPG materials, worn timber, brass lantern at bow, tied supplies, grounded human proportions, warm subtle lantern light on boat only. Perfectly uniform FLAT exact chroma-key MAGENTA #FF00FF everywhere outside the boat and people and between limbs and oars, no painted water, no ground shadow, no gradients, no backdrop, no text, no labels, no grid, no borders. No extra boats or people. This is for actual frame animation and clean runtime compositing, keep each entire boat and oars separate within its own cell.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "ferry-atlas-v1.png",
+    "status": "selected",
+    "originalSha256": "0c242fd0e17e0c925651089cb5a977264eeb29a088ab9a1465dd8e0d9c6c8b21"
+  },
+  {
+    "key": "emberwake_ferry_calm_generation",
+    "prompt": "Edit this exact Emberwake river environment into its BEFORE-STORM state. Preserve the exact composition, camera, water surface boundaries, all rocks, trees, mountains, two dock locations and sizes, and navigable central water space. Change only weather and lighting: stop all visible rain, make the river gentler with smaller ripples, warm late afternoon sunlight filtering into the forest, amber shafts and soft jade shadows, slight distant atmospheric haze. The same beautiful premium painterly woodland fantasy art, crisp environment detail, no new objects. No people, no boat, no creatures, no labels or UI. This is the calm state of the identical game ferry scene, not a new location.",
+    "tool": "built-in image_gen",
+    "date": "2026-09-13",
+    "selectedFile": "ferry-river-calm-v1.png",
+    "status": "selected",
+    "originalSha256": "4381f9f37dc2e62159b8d343655d8605714789bbc0b25571e2e74059d863b840"
+  }
+]

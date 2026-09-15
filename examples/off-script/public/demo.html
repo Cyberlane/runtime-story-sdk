@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#111d20" />
+    <title>Off Script · The Last Ledger</title>
+    <link rel="stylesheet" href="/demo.css" />
+  </head>
+  <body>
+    <main id="game" aria-label="Off Script narrative adventure">
+      <canvas
+        id="stage"
+        aria-label="Illustrated scene. Use the labeled action button below to interact."
+      ></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <header class="hud">
+        <a class="wordmark" href="/play" aria-label="Off Script title"
+          >OFF <i>SCRIPT</i><span>THE LAST LEDGER</span></a
+        >
+        <div id="chapter" class="chapter">A STORY ABOUT ANOTHER WAY</div>
+        <nav>
+          <button id="sound" class="quiet" aria-pressed="false">
+            Sound off</button
+          ><button id="menu" class="quiet">Pause <span>Ⅱ</span></button>
+        </nav>
+      </header>
+      <section id="titleScreen" class="title-screen">
+        <p class="eyebrow">A PLAYABLE STORY POWERED BY YOUR INTENTIONS</p>
+        <h1>There is always<br /><em>another way.</em></h1>
+        <p class="title-copy">
+          One dangerous ledger. A closing gate.<br />A promise you decide how to
+          keep.
+        </p>
+        <button id="begin" class="primary">
+          Enter the warehouse <span>→</span></button
+        ><button id="resume" class="text-button" hidden>
+          Continue this story
+        </button>
+        <p class="small">
+          A short adventure · click or tap to play<br />Write a deal. Watch it
+          become a way forward.
+        </p>
+        <div id="bootStatus" role="status">Connecting to the story…</div>
+      </section>
+      <aside id="objective" class="objective" hidden>
+        <span id="actLabel" class="eyebrow"></span>
+        <p id="objectiveText"></p>
+      </aside>
+      <div id="hotspots" class="hotspots" aria-label="Scene interactions"></div>
+      <div id="receipt" class="receipt" role="status" hidden></div>
+      <section
+        id="conversation"
+        class="conversation"
+        hidden
+        aria-label="Conversation"
+      >
+        <div class="dialogue-heading">
+          <span id="speaker" class="eyebrow"></span
+          ><span id="origin" class="origin">STORY DIALOGUE</span>
+        </div>
+        <div class="dialogue-layout">
+          <canvas
+            id="portrait"
+            width="180"
+            height="180"
+            aria-hidden="true"
+          ></canvas>
+          <div class="dialogue-content">
+            <h2 id="lineTitle"></h2>
+            <p id="lineText"></p>
+            <div id="content"></div>
+            <div id="actions" class="actions"></div>
+          </div>
+        </div>
+      </section>
+      <div id="liveWait" class="live-wait" hidden role="status">
+        <div class="orbit" aria-hidden="true">✦</div>
+        <span class="eyebrow">LIVE OPENAI · COMPOSING YOUR DEAL</span>
+        <h2>Finding a way to keep your promise.</h2>
+        <p id="waitText">Reading your intention and the current world.</p>
+        <span id="elapsed">0s</span>
+        <p class="small">Nothing is accepted or executed while you wait.</p>
+      </div>
+      <div id="transition" class="transition" aria-hidden="true">
+        <span></span>
+      </div>
+      <div id="error" class="error" role="alert" hidden>
+        <strong>The story is still here.</strong>
+        <p id="errorText"></p>
+        <button id="retry" class="quiet">Try again</button
+        ><button id="dismissError" class="quiet">Back to the story</button>
+      </div>
+    </main>
+    <dialog id="pauseDialog">
+      <div class="modal-head">
+        <span class="eyebrow">OFF SCRIPT</span
+        ><button data-close="pauseDialog" class="quiet">Close ×</button>
+      </div>
+      <h2>A moment to breathe.</h2>
+      <p>
+        Click a marked person or the action beneath the conversation. Use Tab
+        and Enter for keyboard play. Your own words become a proposed deal only
+        when you send them.
+      </p>
+      <div class="menu-actions">
+        <button id="save" class="primary">Save checkpoint</button
+        ><button id="load" class="quiet">Return to checkpoint</button
+        ><button id="journal" class="quiet">The story so far</button
+        ><button id="about" class="quiet">How Off Script works</button
+        ><button id="restart" class="quiet">Start a new story</button>
+      </div>
+      <label class="audio-volume" for="volume"
+        >Sound volume <output id="volumeValue">55%</output>
+        <input id="volume" type="range" min="0" max="100" value="55" />
+      </label>
+      <label class="preference"
+        ><input id="reduceMotion" type="checkbox" /> Reduce motion and reveal
+        dialogue instantly</label
+      >
+      <p id="saveStatus" role="status" class="small"></p>
+    </dialog>
+    <dialog id="restartDialog">
+      <span class="eyebrow">A FRESH PAGE</span>
+      <h2>Begin again?</h2>
+      <p>
+        This replaces the current story. Your saved checkpoint remains
+        available.
+      </p>
+      <div class="actions">
+        <button id="confirmRestart" class="primary">Start a new story</button
+        ><button data-close="restartDialog" class="quiet">Keep playing</button>
+      </div>
+    </dialog>
+    <dialog id="journalDialog">
+      <div class="modal-head">
+        <span class="eyebrow">YOUR RECORD</span
+        ><button data-close="journalDialog" class="quiet">Close ×</button>
+      </div>
+      <h2>The story so far.</h2>
+      <div id="journalContent"></div>
+      <button id="export" class="quiet">Download this playthrough</button>
+    </dialog>
+    <dialog id="aboutDialog">
+      <div class="modal-head">
+        <span class="eyebrow">BEHIND THE STORY</span
+        ><button data-close="aboutDialog" class="quiet">Close ×</button>
+      </div>
+      <h2>Your words. Playable consequences.</h2>
+      <p>
+        <strong>When you send a deal, OpenAI interprets your intention</strong>
+        and composes a plan from the game's supported actions. You inspect and
+        accept it, then carry it out.
+      </p>
+      <p>
+        The game owns evidence, consent rules, possessions and time. When the
+        gate closes, the model sees what actually happened and proposes a new
+        plan without undoing the completed exchange.
+      </p>
+      <p>
+        Opening dialogue, art, the night-watch event and scene animation are
+        authored. The live proposals are generated. This small host supports
+        copying, delivery, passage, shelter, movement and waiting. It cannot
+        invent new mechanics.
+      </p>
+      <p>
+        <strong>This game uses the reusable Runtime Story SDK.</strong>
+        A separate resource-management game uses the same installed package for
+        repairs, power, heat and surveys, including a working Godot client.
+        Developers supply their own mechanics and rules. The tool supplies the
+        shared planning, validation and execution record.
+      </p>
+      <p id="providerInfo" class="small"></p>
+      <details>
+        <summary>Credits and demonstration limits</summary>
+        <p>
+          Original prototype, story and presentation by Justin with Codex. Scene
+          and character art generated with OpenAI using the project's original
+          concept collection. Original composed procedural score and sound
+          effects. System fonts. No Blender models are used here.
+        </p>
+        <p>
+          This is a local single-session demonstration. A deterministic planner
+          and an equal-information direct model also passed the three comparison
+          cases. The deterministic planner was faster. Godot execution is
+          verified. Unity and Unreal examples have not been run, and human
+          authoring-time savings have not been measured.
+        </p>
+      </details>
+    </dialog>
+    <script type="module" src="/demo.js"></script>
+  </body>
+</html>
